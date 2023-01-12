@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Minutes to Seconds Converter</title>
+  </head>
+  <body>
+    <h1>Minutes to Seconds Converter</h1>
+    <p>Enter the number of minutes you want to convert:</p>
+    <input id="minutes" type="text" />
+    <button onclick="convertMinutesToSeconds()">Convert</button>
+    <p id="result"></p>
+    <p>Enter the number of seconds you want to convert:</p>
+    <input id="seconds" type="text" />
+    <button onclick="convertSecondsToMinutes()">Convert</button>
+    <p id="secondResult"></p>
+    <script>
+      function convertMinutesToSeconds() {
+        // Get the number of minutes from the input field
+        var minutes = document.getElementById('minutes').value;
+        // Convert the minutes to seconds
+        var seconds = minutes * 60;
+        // Display the result
+        document.getElementById('result').innerHTML =
+          minutes + ' minutes is equal to ' + seconds + ' seconds.';
+      }
+      function convertSecondsToMinutes() {
+        // Get the number of seconds from the input field
+        var seconds = document.getElementById('seconds').value;
+        // Convert the seconds to minutes
+        var minutes = seconds / 60;
+        // Display the result
+        document.getElementById('secondResult').innerHTML =
+          seconds + ' seconds is equal to ' + minutes + ' minutes.';
+      }
+    </script>
+  </body>
+</html>
